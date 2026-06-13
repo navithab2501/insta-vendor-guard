@@ -1,0 +1,62 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Vendor Guard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🛡️ Insta Vendor Guard</h1>
+
+        <p class="subtitle">
+            Detect Fake Instagram Vendors using Screenshot Analysis
+        </p>
+
+        <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+            <div class="upload-box">
+
+                <h2>📷 Bio Screenshot</h2>
+
+                <input type="file" name="bio_image">
+
+            </div>
+
+            <div class="upload-box">
+
+                <h2>🛍️ Post Screenshot</h2>
+
+                <input type="file" name="post_image">
+
+            </div>
+
+            <div class="upload-box">
+
+                <h2>💬 DM Screenshot</h2>
+
+                <input type="file" name="dm_image">
+
+            </div>
+
+            <br>
+
+            <button type="submit">
+                Analyze
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
+```

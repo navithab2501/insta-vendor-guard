@@ -1,0 +1,7 @@
+Flask
+easyocr
+opencv-python-headless
+numpy
+torch
+torchvision
+Pillow

@@ -1,0 +1,177 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Analysis Result</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🛡️ Insta Vendor Guard</h1>
+
+        <p class="subtitle">
+            Instagram Vendor Analysis Report
+        </p>
+
+        <!-- Trust Score -->
+
+        <div class="result-box">
+
+            <h2>📊 Trust Score</h2>
+
+            <p>
+
+                <strong>Score :</strong>
+
+                {{ result.trust_score }}/100
+
+            </p>
+
+            <p>
+
+                <strong>Status :</strong>
+
+                {{ result.status }}
+
+            </p>
+
+            <p>
+
+                <strong>Prediction :</strong>
+
+                {{ result.message }}
+
+            </p>
+
+        </div>
+
+        <br>
+
+        <!-- Bio -->
+
+        <div class="result-box">
+
+            <h2>📷 Bio Analysis</h2>
+
+            <p>
+
+                <strong>Username :</strong>
+
+                {{ bio.username }}
+
+            </p>
+
+            <p>
+
+                <strong>Posts :</strong>
+
+                {{ bio.posts }}
+
+            </p>
+
+            <p>
+
+                <strong>Followers :</strong>
+
+                {{ bio.followers }}
+
+            </p>
+
+            <p>
+
+                <strong>Following :</strong>
+
+                {{ bio.following }}
+
+            </p>
+
+        </div>
+
+        <br>
+
+        <!-- Post -->
+
+        <div class="result-box">
+
+            <h2>🛍️ Post Analysis</h2>
+
+            <p>
+
+                <strong>Detected Keywords :</strong>
+
+                {{ post.found_keywords }}
+
+            </p>
+
+        </div>
+
+        <br>
+
+        <!-- DM -->
+
+        <div class="result-box">
+
+            <h2>💬 DM Analysis</h2>
+
+            <p>
+
+                <strong>Risk Keywords :</strong>
+
+                {{ dm.risk_keywords }}
+
+            </p>
+
+            <p>
+
+                <strong>Safe Keywords :</strong>
+
+                {{ dm.safe_keywords }}
+
+            </p>
+
+        </div>
+
+        <br>
+
+        <!-- Reasons -->
+
+        <div class="result-box">
+
+            <h2>📌 Analysis Reasons</h2>
+
+            <ul>
+
+                {% for reason in result.reasons %}
+
+                <li>{{ reason }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+        <br>
+
+        <a href="/">
+
+            ⬅️ Back to Home
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>
+```
