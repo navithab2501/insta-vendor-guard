@@ -1,7 +1,7 @@
 Flask
+gunicorn
 easyocr
-opencv-python-headless
-numpy
+opencv-python
 torch
-torchvision
+numpy
 Pillow
