@@ -1,7 +1,5 @@
 Flask
 gunicorn
-easyocr
-opencv-python
-torch
-numpy
+pytesseract
 Pillow
+numpy
