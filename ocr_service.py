@@ -1,6 +1,19 @@
-from PIL import Image
-import pytesseract
+import easyocr
+
+# OCR Reader (once create pannuvom)
+reader = easyocr.Reader(['en'])
+
 
 def extract_text(image_path):
-    img = Image.open(image_path)
-    return pytesseract.image_to_string(img)
+    """
+    Image-la irundhu text extract pannum function
+    """
+
+    result = reader.readtext(image_path)
+
+    extracted_text = ""
+
+    for item in result:
+        extracted_text += item[1] + "\n"
+
+    return extracted_text
